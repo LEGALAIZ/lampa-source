@@ -325,7 +325,8 @@ function prepareApp(){
     }
     else if(old_css.length){
         Utils.putStyle([
-            'https://yumata.github.io/lampa/css/app.css?v' + Manifest.css_version
+            ////'https://yumata.github.io/lampa/css/app.css?v' + Manifest.css_version
+            './css/app.css?v' + Manifest.css_version
         ],()=>{
             old_css.remove()
         })
@@ -651,7 +652,9 @@ function startApp(){
     let video_libs = ['hls/hls.js', 'dash/dash.js']
 
     video_libs = video_libs.map(lib=>{
-        return window.location.protocol == 'file:' ? 'https://yumata.github.io/lampa/vender/' + lib : './vender/' + lib
+        return window.location.protocol == 'file:' ? './vender/' + lib : './vender/' + lib
+//      return window.location.protocol == 'file:' ? 'https://yumata.github.io/lampa/vender/' + lib : './vender/' + lib
+
     })
 
     Utils.putScript(video_libs,()=>{})
@@ -816,7 +819,7 @@ function loadLang(){
     if(['ru','en'].indexOf(code) >= 0) call()
     else{
         $.ajax({
-            url: (location.protocol == 'file:' ? 'https://yumata.github.io/lampa/' : './') + 'lang/' + code + '.js',
+            url: (location.protocol == 'file:' ? './' : './') + 'lang/' + code + '.js',
             dataType: 'text',
             timeout: 10000,
             success: (data)=>{

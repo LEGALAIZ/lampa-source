@@ -29,7 +29,9 @@ function init(){
             if(!ready){
                 console.log('VPN', 'install TMDB Proxy')
 
-                Plugins.add({url: 'http://' + Manifest.cub_domain + '/plugin/tmdb-proxy', status: 1, name: 'TMDB Proxy', author: '@lampa'})
+                Plugins.add({url: './plugins/tmdb_proxy.js', status: 1, name: 'TMDB Proxy LOCAL', author: '@lampa-LIGA'})
+                Plugins.add({url: './vender/skaztv_store/skaztv_store.js', status: 1, name: 'skaztv_store LOCAL', author: '@lampa-LIGA'})
+                Plugins.add({url: './plugins/scabrum_addons/scabrum_addon.js', status: 1, name: 'Scabrum_Addons LOCAL', author: '@lampa-LIGA'}
             }
         }
     }

@@ -179,9 +179,9 @@ function load(call){
             
             console.log('Plugins','load list:', puts)
 
-            black_list.push('lipp.xyz')
-            black_list.push('llpp.xyz')
-            black_list.push('scabrum.github.io')
+            ////black_list.push('lipp.xyz')
+            ////black_list.push('llpp.xyz')
+            ////black_list.push('scabrum.github.io')
 
             console.log('Plugins','black list:', black_list)
 
